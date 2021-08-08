@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -19,7 +20,12 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--white);
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -40,8 +46,14 @@ h6 {
 
 /* HEADER & NAVIGATION */
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 1rem;
 }
@@ -89,6 +101,7 @@ nav a {
   color: var(--light);
 }
 .open-nav {
+  display: -ms-grid;
   display: grid;
   opacity: 1;
 }
@@ -154,7 +167,7 @@ main p {
   top: 0;
   left: 0;
   opacity: 0.15;
-  z-index: -1;
+  z-index: 1;
 }
 
 @media (min-width: 500px) {
@@ -169,7 +182,11 @@ main p {
 
   nav ul {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     background: unset;
     text-transform: uppercase;
@@ -199,7 +216,11 @@ main p {
   }
 
   .btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -209,4 +230,93 @@ main p {
 }
 
 @media (min-width: 950px) {
+  .left-col {
+    width: 60%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .logo {
+    font-size: 2rem;
+    width: 60%;
+    padding: 0 1rem;
+  }
+
+  header {
+    padding: 1rem 0;
+  }
+
+  nav {
+    width: 40%;
+  }
+
+  nav ul {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 0;
+  }
+  nav a {
+    padding: 0 1rem;
+  }
+
+  .container {
+    padding: 0;
+    background: none;
+  }
+
+  main {
+    width: 60%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+
+  main h1 {
+    font-size: 3.25rem;
+  }
+
+  main p {
+    font-size: 1.25em;
+    width: 100%;
+    margin: 2rem auto;
+    text-align: left;
+  }
+
+  .cta {
+    padding: 0.5rem 1.25rem;
+    margin: 1rem 2rem 0 0;
+  }
+
+  .plant-container {
+    left: 60%;
+    width: 40%;
+  }
+
+  .plant {
+    bottom: 15%;
+    left: 5%;
+    width: 85%;
+  }
+
+  .fern {
+    width: 20vh;
+    height: 20%;
+  }
 }
