@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+:root {
+  --dark: #47946e;
+  --light: #aadfc5;
+  --brown: #7a4900;
+  --white: #fefefe;
+  --black: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--light);
+  font-family: "Poppins", sans-serif;
+  color: var(--white);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--brown);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER & NAVIGATION */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+  font-size: 1.75rem;
+  letter-spacing: 0.075em;
+}
+
+.menu {
+  width: 1.75rem;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--brown);
+  display: none;
+  place-content: center;
+  z-index: 1;
+}
+
+nav a {
+  color: var(--white, white);
+  font-size: 2rem;
+  padding: 1.5rem;
+  display: block;
+}
+
+.exit svg {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.75rem;
+  cursor: pointer;
+}
+
+.active a {
+  color: var(--light);
+}
+.open-nav {
+  display: grid;
+  opacity: 1;
+}
+
+/* MAIN CONTENT */
+.container {
+  padding: 3rem 0;
+  background: var(--light);
+  color: var(--black, black);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.09);
+  height: 100%;
+}
+
+main h1 {
+  font-size: 2rem;
+}
+
+main p {
+  font-size: 1em;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.cta {
+  display: block;
+  background: red;
+  padding: 0.5rem 1.25rem;
+  margin: 1rem;
+  background: var(--brown);
+  color: var(--white, white);
+}
+
+.outline {
+  color: var(--black, black);
+  border: 2px solid var(--dark);
+  background: transparent;
+}
+
+/* PLANT IMGS */
+.plant-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.plant {
+  position: absolute;
+  bottom: -60%;
+  left: -25%;
+  width: 850px;
+}
+
+.fern {
+  background: url("/images/fern.svg") no-repeat;
+  width: 15vh;
+  height: 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+@media (min-width: 500px) {
+  body {
+    font-size: 18px;
+  }
+
+  .menu,
+  .exit {
+    display: none;
+  }
+
+  nav ul {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background: unset;
+    text-transform: uppercase;
+    height: unset;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 0.5rem;
+  }
+
+  .active a {
+    color: var(--dark);
+  }
+
+  .container {
+    padding: 7rem 0;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+  }
+
+  main p {
+    font-size: 1.15em;
+    margin: 1.5rem auto;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .plant {
+    left: 50%;
+  }
+}
+
+@media (min-width: 950px) {
+}
